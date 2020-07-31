@@ -18,6 +18,7 @@ alias lf='ll | grep -v ^d'
 alias ld='dir -lh --color=auto'
 alias config='/usr/bin/git --git-dir=/home/stefan/dotfiles/ --work-tree=/home/stefan'
 alias vim=nvim
+alias vi=vim
 alias ..='cd ..'
 alias home='cd ~'
 
