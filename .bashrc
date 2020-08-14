@@ -23,3 +23,5 @@ alias ..='cd ..'
 alias home='cd ~'
 
 source $HOME/.bash_functions
+source /etc/profile.d/vte.sh
+
