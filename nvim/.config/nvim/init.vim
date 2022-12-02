@@ -22,6 +22,9 @@ call plug#begin()
         Plug 'mhinz/vim-signify'
         Plug 'neoclide/coc.nvim', {'branch': 'release'}
         Plug 'vim-python/python-syntax'
+        Plug 'lervag/vimtex'
+        Plug 'averms/black-nvim', {'do': ':UpdateRemotePlugins'}
+        Plug 'terrastruct/d2-vim'
 call plug#end()
 
 
@@ -149,3 +152,23 @@ endif
 " Requires 'textDocument/selectionRange' support of language server.
 nmap <silent> <C-s> <Plug>(coc-range-select)
 xmap <silent> <C-s> <Plug>(coc-range-select)
+
+" Docstring stuff
+nmap <silent> ga <Plug>(coc-codeaction-line)
+xmap <silent> ga <Plug>(coc-codeaction-selected)
+nmap <silent> gA <Plug>(coc-codeaction)
+
+" D2 stuff
+
+let g:d2_block_string_syntaxes = {
+    \ 'd2': ['d2'],
+    \ 'markdown': ['md', 'markdown'],
+    \ 'javascript': ['javascript', 'js'],
+    \ 'html': ['html'],
+    \ 'json': ['json'],
+    \ 'c': ['c'],
+    \ 'go': ['go'],
+    \ 'sh': ['sh', 'ksh', 'bash'],
+    \ 'css': ['css'],
+    \ 'vim': ['vim'],
+    \ }
